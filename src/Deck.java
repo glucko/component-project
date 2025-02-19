@@ -78,13 +78,18 @@ public class Deck {
             deck.addCard(deck.generateRandomCard());
         }
 
-        System.out.println(deck.removeTopCard());
+        System.out.println("Before any changes:");
         System.out.println(deck.stringRep());
 
-        System.out.println("\nSORTS\n");
+        System.out.println("\nAfter removing top card:");
+        System.out.println("Top card: " + deck.removeTopCard());
+        System.out.println(deck.stringRep());
+
+        System.out.println("\nSort by Suits:");
         deck.suitSort();
         System.out.println(deck.stringRep());
 
+        System.out.println("\nSort by Rank:");
         deck.rankSort();
         System.out.println(deck.stringRep());
     }
