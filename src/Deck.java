@@ -1,96 +1,57 @@
-import java.util.ArrayList;
-import java.util.Comparator;
-import java.util.Random;
+import javax.smartcardio.Card;
 
-public class Deck {
+/**
+ * {@code DeckKernel} enhanced with secondary methods.
+ */
+public interface Deck extends DeckKernel {
 
-    private ArrayList<Card> cards;
+    /**
+     * Removes a specified card from {@code this}.
+     *
+     * @param c
+     *            The card to be removed from {@code this}.
+     * @updates this
+     * @requires p in this
+     * @ensures LENGTH(#this) = LENGTH(this) - 1
+     */
+    void removeCard(Card c);
 
-    private static Random RANDOM = new Random();
+    /**
+     * Sorts the cards in {@code this} by rank.
+     *
+     * @updates this
+     *
+     * @ensures this = SORT_BY_RANK(#this)
+     */
+    void rankSort();
 
-    public static enum Suit {
-        HEARTS, SPADES, CLUBS, DIAMONDS
-    }
+    /**
+     * Sorts the cards in {@code this} by suit.
+     *
+     * @updates this
+     *
+     * @ensures this = SORT_BY_SUIT(#this)
+     */
+    void suitSort();
 
-    public static enum Rank {
-        ONE, TWO, THREE, FOUR, FIVE, SIX, SEVEN, EIGHT, NINE, TEN, ACE, KING, QUEEN, JACK;
-    }
+    /**
+     * Initializes {@code this} from an array representation.
+     *
+     * @param arr
+     *            The array {@code this} will be set from.
+     *
+     * @replaces this
+     * @ensures ELEMENTS(arr) = ELEMENTS(this)
+     */
+    void setFromArray(Card[] arr);
 
-    private static Suit[] SUITVALS = Suit.values();
-    private static Rank[] RANKVALS = Rank.values();
+    /**
+     * Converts {@code this} to an array of cards.
+     *
+     * @return An array containing all cards in {@code this}.
+     *
+     * @ensures s = TO_ARRAY(this)
+     */
+    Card[] convertToArray();
 
-    record Card(Suit suit, Rank rank) {
-        static class SuitComparator implements Comparator<Card> {
-            @Override
-            public int compare(Card c1, Card c2) {
-                return c1.suit.compareTo(c2.suit);
-            }
-        }
-
-        static class RankComparator implements Comparator<Card> {
-            @Override
-            public int compare(Card c1, Card c2) {
-                return c1.rank.compareTo(c2.rank);
-            }
-        }
-    }
-
-    public Deck() {
-        this.cards = new ArrayList<Card>();
-    }
-
-    public void addCard(Card card) {
-        this.cards.add(card);
-    }
-
-    public Card removeTopCard() {
-        return this.cards.remove(0);
-    }
-
-    public Card generateRandomCard() {
-        int suitIndex = Deck.RANDOM.nextInt(Deck.SUITVALS.length);
-        int rankIndex = Deck.RANDOM.nextInt(Deck.RANKVALS.length);
-
-        return new Card(Deck.SUITVALS[suitIndex], Deck.RANKVALS[rankIndex]);
-    }
-
-    public void rankSort() {
-        this.cards.sort(new Card.RankComparator());
-    }
-
-    public void suitSort() {
-        this.cards.sort(new Card.SuitComparator());
-    }
-
-    public String stringRep() {
-        String rep = "";
-
-        for (Card i : this.cards) {
-            rep += i.toString() + ", ";
-        }
-        return rep;
-    }
-
-    public static void main(String[] args) {
-        Deck deck = new Deck();
-
-        for (int i = 0; i < 5; i++) {
-            deck.addCard(deck.generateRandomCard());
-        }
-
-        System.out.println("Before any changes:");
-        System.out.println(deck.stringRep());
-
-        System.out.println("\nAfter removing top card:");
-        System.out.println("Top card: " + deck.removeTopCard());
-        System.out.println(deck.stringRep());
-
-        System.out.println("\nSort by Suits:");
-        deck.suitSort();
-        System.out.println(deck.stringRep());
-
-        System.out.println("\nSort by Rank:");
-        deck.rankSort();
-        System.out.println(deck.stringRep());
-    }
 }
