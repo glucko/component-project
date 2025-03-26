@@ -129,4 +129,24 @@ public abstract class DeckSecondary implements Deck {
         return cards;
     }
 
+    @Override
+    public String toString() {
+        String out = "";
+        for (Card i : this.convertToArray()) {
+            out += i.toString() + "\n";
+        }
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null || this.getClass() != obj.getClass()) {
+            return false;
+        }
+        DeckSecondary other = (DeckSecondary) obj;
+        return Arrays.equals(other.convertToArray(), this.convertToArray());
+    }
+
 }
