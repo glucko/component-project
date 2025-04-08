@@ -1,39 +1,10 @@
 import java.util.Arrays;
-import java.util.Comparator;
 import java.util.List;
 
-// Note: could not get rid of the overrides, saving auto added them.
 /**
  * {@code Deck} abstract class.
  */
 public abstract class DeckSecondary implements Deck {
-
-    public static enum Suit {
-        HEARTS, SPADES, CLUBS, DIAMONDS
-    }
-
-    public static enum Rank {
-        ONE, TWO, THREE, FOUR, FIVE, SIX, SEVEN, EIGHT, NINE, TEN, ACE, KING, QUEEN, JACK;
-    }
-
-    private static Suit[] SUITVALS = Suit.values();
-    private static Rank[] RANKVALS = Rank.values();
-
-    record Card(Suit suit, Rank rank) {
-        static class SuitComparator implements Comparator<Card> {
-            @Override
-            public int compare(Card c1, Card c2) {
-                return c1.suit.compareTo(c2.suit);
-            }
-        }
-
-        static class RankComparator implements Comparator<Card> {
-            @Override
-            public int compare(Card c1, Card c2) {
-                return c1.rank.compareTo(c2.rank);
-            }
-        }
-    }
 
     /**
      * Removes a specified card from {@code this}.
@@ -135,6 +106,7 @@ public abstract class DeckSecondary implements Deck {
         for (Card i : this.convertToArray()) {
             out += i.toString() + "\n";
         }
+        return out;
     }
 
     @Override

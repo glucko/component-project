@@ -1,5 +1,3 @@
-import javax.smartcardio.Card;
-
 /**
  * {@code DeckKernel} enhanced with secondary methods.
  */

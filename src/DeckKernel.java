@@ -1,9 +1,55 @@
-import javax.smartcardio.Card; // ignore this, kept getting auto added on save
+import java.util.Comparator;
+
+import components.standard.Standard;
 
 /**
  * Deck kernel componenet with primary methods.
  */
 public interface DeckKernel extends Standard<Deck> {
+
+    /**
+     * Represents the possible suits of a playing card.
+     */
+    enum Suit {
+        HEARTS, SPADES, CLUBS, DIAMONDS
+    }
+
+    /**
+     * Represents the possible ranks of a playing card.
+     */
+    enum Rank {
+        ONE, TWO, THREE, FOUR, FIVE, SIX, SEVEN, EIGHT, NINE, TEN, ACE, KING, QUEEN, JACK;
+    }
+
+    /**
+     * Represents a playing card with a suit and rank.
+     *
+     * @param suit
+     *            the suit of the card (e.g., HEARTS, SPADES, etc.)
+     * @param rank
+     *            the rank of the card (e.g., ONE, TWO, ACE, etc.)
+     */
+    record Card(Suit suit, Rank rank) {
+        /**
+         * Comparator for comparing cards based on their suit.
+         */
+        static class SuitComparator implements Comparator<Card> {
+            @Override
+            public int compare(Card c1, Card c2) {
+                return c1.suit.compareTo(c2.suit);
+            }
+        }
+
+        /**
+         * Comparator for comparing cards based on their rank.
+         */
+        static class RankComparator implements Comparator<Card> {
+            @Override
+            public int compare(Card c1, Card c2) {
+                return c1.rank.compareTo(c2.rank);
+            }
+        }
+    }
 
     /**
      * Adds {@code c} to {@code this}.
