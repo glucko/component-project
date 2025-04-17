@@ -1,3 +1,5 @@
+package components.deck;
+
 import java.util.ArrayList;
 import java.util.Collections;
 
@@ -22,7 +24,12 @@ public final class Deck1 extends DeckSecondary {
 
     @Override
     public Deck newInstance() {
-        return new Deck1();
+        try {
+            return this.getClass().getConstructor().newInstance();
+        } catch (ReflectiveOperationException e) {
+            throw new AssertionError(
+                    "Cannot construct object of type " + this.getClass());
+        }
     }
 
     /**

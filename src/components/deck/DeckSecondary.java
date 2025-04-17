@@ -1,3 +1,5 @@
+package components.deck;
+
 import java.util.Arrays;
 import java.util.List;
 
@@ -7,13 +9,7 @@ import java.util.List;
 public abstract class DeckSecondary implements Deck {
 
     /**
-     * Removes a specified card from {@code this}.
-     *
-     * @param c
-     *            The card to be removed from {@code this}.
-     * @updates this
-     * @requires p in this
-     * @ensures LENGTH(#this) = LENGTH(this) - 1
+     * @inheritDoc
      */
     @Override
     public void removeCard(Card c) {
@@ -31,11 +27,7 @@ public abstract class DeckSecondary implements Deck {
     }
 
     /**
-     * Sorts the cards in {@code this} by rank.
-     *
-     * @updates this
-     *
-     * @ensures this = SORT_BY_RANK(#this)
+     * @inheritDoc
      */
     @Override
     public void rankSort() {
@@ -47,11 +39,7 @@ public abstract class DeckSecondary implements Deck {
     }
 
     /**
-     * Sorts the cards in {@code this} by suit.
-     *
-     * @updates this
-     *
-     * @ensures this = SORT_BY_SUIT(#this)
+     * @inheritDoc
      */
     @Override
     public void suitSort() {
@@ -63,13 +51,7 @@ public abstract class DeckSecondary implements Deck {
     }
 
     /**
-     * Initializes {@code this} from an array representation.
-     *
-     * @param arr
-     *            The array {@code this} will be set from.
-     *
-     * @replaces this
-     * @ensures ELEMENTS(arr) = ELEMENTS(this)
+     * @inheritDoc
      */
     @Override
     public void setFromArray(Card[] arr) {
@@ -84,11 +66,7 @@ public abstract class DeckSecondary implements Deck {
     }
 
     /**
-     * Converts {@code this} to an array of cards.
-     *
-     * @return An array containing all cards in {@code this}.
-     *
-     * @ensures s = TO_ARRAY(this)
+     * @inheritDoc
      */
     @Override
     public Card[] convertToArray() {
@@ -100,6 +78,9 @@ public abstract class DeckSecondary implements Deck {
         return cards;
     }
 
+    /**
+     * @inheritDoc
+     */
     @Override
     public String toString() {
         String out = "";
@@ -109,6 +90,9 @@ public abstract class DeckSecondary implements Deck {
         return out;
     }
 
+    /**
+     * @inheritDoc
+     */
     @Override
     public boolean equals(Object obj) {
         if (this == obj) {
