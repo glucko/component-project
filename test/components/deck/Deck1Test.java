@@ -1,5 +1,4 @@
-import components.deck.Deck;
-import components.deck.Deck1;
+package components.deck;
 
 /**
  * Customized JUnit test fixture for {@code Deck1}.

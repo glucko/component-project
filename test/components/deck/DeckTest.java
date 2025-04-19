@@ -1,10 +1,9 @@
+package components.deck;
+
 import static org.junit.Assert.assertArrayEquals;
 import static org.junit.Assert.assertEquals;
 
 import org.junit.Test;
-
-import components.deck.Deck;
-import components.deck.DeckKernel;
 
 /**
  * JUnit test fixture for {@code Deck}'s constructor and methods.
@@ -187,8 +186,11 @@ public abstract class DeckTest {
         Deck test = this.createDeck("ONE_CLUBS");
         Deck expected = this.createDeck();
 
-        test.removeTopCard();
+        DeckKernel.Card expectedCard = this.createCard("ONE_CLUBS");
+        DeckKernel.Card testCard = test.removeTopCard();
+
         assertEquals(expected, test);
+        assertEquals(expectedCard, testCard);
     }
 
     @Test
@@ -196,8 +198,11 @@ public abstract class DeckTest {
         Deck test = this.createDeck("ONE_CLUBS", "TWO_HEARTS");
         Deck expected = this.createDeck("ONE_CLUBS");
 
-        test.removeTopCard();
+        DeckKernel.Card expectedCard = this.createCard("TWO_HEARTS");
+        DeckKernel.Card testCard = test.removeTopCard();
+
         assertEquals(expected, test);
+        assertEquals(expectedCard, testCard);
     }
 
     @Test
@@ -207,8 +212,11 @@ public abstract class DeckTest {
         Deck expected = this.createDeck("ONE_CLUBS", "TWO_HEARTS",
                 "THREE_CLUBS");
 
-        test.removeTopCard();
+        DeckKernel.Card expectedCard = this.createCard("FOUR_CLUBS");
+        DeckKernel.Card testCard = test.removeTopCard();
+
         assertEquals(expected, test);
+        assertEquals(expectedCard, testCard);
     }
 
     /*
