@@ -304,14 +304,33 @@ Take some time to fill them out honestly.
 > complete the portfolio project, how much better (or worse) do you think you
 > understand software development and why?
 
+I do not feel like I understand software development that much better after this project because
+most of my time was not spent on challenging things, but tedious tasks due to the
+OSU discipline like separating an object into kernel methods and secondary method and
+trying to write the secondary methods with only the kernel methods. However,
+I did learn about writing test cases and how they are useful for finding bugs, even
+if they are tedious and not very fun to write.
 
 > Also, did the portfolio project surface any gaps in your own knowledge of
 > software development. If so, what are those gaps and how did you address them?
 
+The portfolio project did not really surface any gaps. My actual component model,
+a deck of cards, was pretty simple and didn't require any advanced math or techniques,
+so nothing really was particularly new to me. However, some of the abstract
+class concepts required me to check back to previous projects in order to make
+sure I was following best practices.
+
 > Finally, as a part of completing the portfolio project, to what extent has
 > your perspective of software development changed, if at all? In other words,
 > is software development something you still enjoy? If not, why not?
->
+
+My main perspective change in software development is that I value developer time
+a bit more now. Rewriting my component from the MVP to the OSU discipline took
+massive amounts of time, and in a real world setting sometimes getting a working
+system up in a timely manner is more important than trying to force it into
+a certain discipline or code structure. I still enjoy software development, but
+I have discovered what parts of it I don't like but are still necessary for writing
+robust code, such as test cases.
 
 > One of the challenges of completing the portfolio project is picking up a lot
 > of skills on your own. Some of these skills are, of course, software skills.
@@ -319,20 +338,36 @@ Take some time to fill them out honestly.
 > this process. Therefore, the first question is what skills did you pick up
 > through this process?
 
+The main skill I picked up is planning out code before writing it. I also learned
+a bit about casting objects to more specific objects and dealing with abstract
+classes. I also learned about designing a component from scratch, and designing
+comprehensive test cases.
 
 > The follow-up question is: could you rephrase these skills you picked up
 > as bullet points that you could put on a resume? Try it below.
 
+- Utilized object-oriented programming such as abstract classes
+- Designed components from scratch into fully fledged models
+- Wrote expansive test cases that covered all aspects of a model
 
 > Next, how has working on this project affected your career trajectory?
 > In other words, do you now hate the topic you picked? Or, are you even more
 > interested in it? Both outcomes are valuable to your personal development.
 
+This project has not really affected my career trajectory. I am still planning
+on going into software development, however I am probably less likely to go into
+something regarding testing as that is what I enjoyed the least in this project.
 
 > Finally, consider the skills you've picked up and your current career
 > trajectory. What are some things you could do to continue on your
 > career trajectory? Also, who are some mentors you could contact to help
 > you stay on your path?
+
+Some things I can do to stay on my current trajectory is to continually build
+projects in order to practice my programming skills and gain experience with
+large codebases. Some mentors I could contact are my brother, who is also in CSE,
+and Jeremy Grifski, as well as other CSE professors who I find helpful as I take
+more classes.
 
 ### Changelog
 >
