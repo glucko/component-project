@@ -1,3 +1,5 @@
+package components.deck;
+
 /**
  * {@code DeckKernel} enhanced with secondary methods.
  */

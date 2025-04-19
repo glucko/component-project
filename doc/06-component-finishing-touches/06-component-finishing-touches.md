@@ -1,8 +1,8 @@
 # Portfolio Part 6: Finishing Touches
 
-- **Name**: <!-- TODO: fill with first and last name (e.g., Brutus Buckeye) and delete this comment -->
-- **Dot Number**: <!-- TODO: fill with OSU dot number (e.g., buckeye.17) and delete this comment -->
-- **Due Date**: <!-- TODO: fill out with due date and time (e.g., 10/17 @ 3:10 PM EST) and delete this comment -->
+- **Name**: Benjamin Gluck
+- **Dot Number**: Gluck.43
+- **Due Date**: 4/18
 
 ## Assignment Overview
 
@@ -49,8 +49,6 @@ Many of these additional techniques are somewhat out of the scope of this
 course, but just knowing about them could set you up for long term success.
 
 ## Assignment Checklist
-
-<!-- TODO: browse the checklist then delete this comment -->
 
 To be sure you have completed everything on this assignment, we have littered
 this document with TODO comments. You can browse all of them in VSCode by
@@ -141,7 +139,6 @@ to see them. If you don't like this workflow, you may try following the
 rebase strategies described [here](https://stackoverflow.com/questions/35790561/working-while-waiting-for-pending-pr)
 and [here](https://stackoverflow.com/questions/18021888/continue-working-on-a-git-branch-after-making-a-pull-request).
 
-<!-- TODO: make a new branch from main then delete this comment -->
 
 ## Assignment Tasks
 
@@ -307,18 +304,33 @@ Take some time to fill them out honestly.
 > complete the portfolio project, how much better (or worse) do you think you
 > understand software development and why?
 
-<!-- TODO: discuss -->
+I do not feel like I understand software development that much better after this project because
+most of my time was not spent on challenging things, but tedious tasks due to the
+OSU discipline like separating an object into kernel methods and secondary method and
+trying to write the secondary methods with only the kernel methods. However,
+I did learn about writing test cases and how they are useful for finding bugs, even
+if they are tedious and not very fun to write.
 
 > Also, did the portfolio project surface any gaps in your own knowledge of
 > software development. If so, what are those gaps and how did you address them?
 
-<!-- TODO: discuss -->
+The portfolio project did not really surface any gaps. My actual component model,
+a deck of cards, was pretty simple and didn't require any advanced math or techniques,
+so nothing really was particularly new to me. However, some of the abstract
+class concepts required me to check back to previous projects in order to make
+sure I was following best practices.
 
 > Finally, as a part of completing the portfolio project, to what extent has
 > your perspective of software development changed, if at all? In other words,
 > is software development something you still enjoy? If not, why not?
 
-<!-- TODO: discuss -->
+My main perspective change in software development is that I value developer time
+a bit more now. Rewriting my component from the MVP to the OSU discipline took
+massive amounts of time, and in a real world setting sometimes getting a working
+system up in a timely manner is more important than trying to force it into
+a certain discipline or code structure. I still enjoy software development, but
+I have discovered what parts of it I don't like but are still necessary for writing
+robust code, such as test cases.
 
 > One of the challenges of completing the portfolio project is picking up a lot
 > of skills on your own. Some of these skills are, of course, software skills.
@@ -326,29 +338,39 @@ Take some time to fill them out honestly.
 > this process. Therefore, the first question is what skills did you pick up
 > through this process?
 
-<!-- TODO: discuss -->
+The main skill I picked up is planning out code before writing it. I also learned
+a bit about casting objects to more specific objects and dealing with abstract
+classes. I also learned about designing a component from scratch, and designing
+comprehensive test cases.
 
 > The follow-up question is: could you rephrase these skills you picked up
 > as bullet points that you could put on a resume? Try it below.
 
-<!-- TODO: discuss -->
+- Utilized object-oriented programming such as abstract classes
+- Designed components from scratch into fully fledged models
+- Wrote expansive test cases that covered all aspects of a model
 
 > Next, how has working on this project affected your career trajectory?
 > In other words, do you now hate the topic you picked? Or, are you even more
 > interested in it? Both outcomes are valuable to your personal development.
 
-<!-- TODO: discuss -->
+This project has not really affected my career trajectory. I am still planning
+on going into software development, however I am probably less likely to go into
+something regarding testing as that is what I enjoyed the least in this project.
 
 > Finally, consider the skills you've picked up and your current career
 > trajectory. What are some things you could do to continue on your
 > career trajectory? Also, who are some mentors you could contact to help
 > you stay on your path?
 
-<!-- TODO: discuss -->
+Some things I can do to stay on my current trajectory is to continually build
+projects in order to practice my programming skills and gain experience with
+large codebases. Some mentors I could contact are my brother, who is also in CSE,
+and Jeremy Grifski, as well as other CSE professors who I find helpful as I take
+more classes.
 
 ### Changelog
-
-<!-- TODO: update CHANGELOG then delete this comment -->
+>
 
 At the end of every assignment, you should update the
 [CHANGELOG.md](../../CHANGELOG.md) file found in the root of the project folder.
@@ -383,8 +405,6 @@ like to accomplish that, you will need to make GitHub releases after each pull
 request merge (or at least tag your commits). This is not required.
 
 ### Submission
-
-<!-- TODO: read the submission instructions then delete this comment -->
 
 Assuming that your project is in a GitHub repo somewhere and your changes are on
 a proof-of-concept branch, then what we'll want you to do is create a pull
@@ -436,6 +456,5 @@ If you'd like to give feedback for this assignment (or any assignment, really),
 make use of [this survey][survey]. Your feedback helps make assignments
 better for future students.
 
-<!-- TODO: follow the link to share your feedback then delete this comment -->
 
 [survey]: https://forms.gle/dumXHo6A4Enucdkq9
