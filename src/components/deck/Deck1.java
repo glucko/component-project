@@ -82,7 +82,7 @@ public final class Deck1 extends DeckSecondary {
 
     @Override
     public Card removeTopCard() {
-        return this.rep.remove(this.rep.size());
+        return this.rep.remove(this.rep.size() - 1);
     }
 
     @Override

@@ -9,25 +9,25 @@ import java.util.List;
 public abstract class DeckSecondary implements Deck {
 
     /**
-     * @inheritDoc
+     * {@inheritDoc}
      */
     @Override
     public void removeCard(Card c) {
         Card[] cardsToAdd = new Card[this.length() - 1];
 
-        int i = 0;
+        int i = cardsToAdd.length - 1;
         while (this.length() > 0) {
             Card top = this.removeTopCard();
             if (!top.equals(c)) {
                 cardsToAdd[i] = top;
-                i++;
+                i--;
             }
         }
         this.setFromArray(cardsToAdd);
     }
 
     /**
-     * @inheritDoc
+     * {@inheritDoc}
      */
     @Override
     public void rankSort() {
@@ -39,7 +39,7 @@ public abstract class DeckSecondary implements Deck {
     }
 
     /**
-     * @inheritDoc
+     * {@inheritDoc}
      */
     @Override
     public void suitSort() {
@@ -51,27 +51,23 @@ public abstract class DeckSecondary implements Deck {
     }
 
     /**
-     * @inheritDoc
+     * {@inheritDoc}
      */
     @Override
     public void setFromArray(Card[] arr) {
-
-        while (this.length() > 0) {
-            this.removeTopCard();
-        }
-
+        this.clear();
         for (int i = 0; i < arr.length; i++) {
             this.addCard(arr[i]);
         }
     }
 
     /**
-     * @inheritDoc
+     * {@inheritDoc}
      */
     @Override
     public Card[] convertToArray() {
         Card[] cards = new Card[this.length()];
-        for (int i = 0; i < this.length(); i++) {
+        for (int i = this.length() - 1; i >= 0; i--) {
             cards[i] = this.removeTopCard();
         }
 
@@ -79,7 +75,7 @@ public abstract class DeckSecondary implements Deck {
     }
 
     /**
-     * @inheritDoc
+     * {@inheritDoc}
      */
     @Override
     public String toString() {
@@ -91,7 +87,7 @@ public abstract class DeckSecondary implements Deck {
     }
 
     /**
-     * @inheritDoc
+     * {@inheritDoc}
      */
     @Override
     public boolean equals(Object obj) {
